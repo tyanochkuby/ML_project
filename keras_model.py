@@ -14,7 +14,7 @@ def score_keras(X_test, y_test, model: keras.Sequential):
 def create_baseline():
     model = keras.Sequential()
     model.add(layers.Dense(6419, input_shape=(6419,), activation='relu'))
-    model.add(layers.Dense(1604, activation='relu'))
+    model.add(layers.Dense(400, activation='relu'))
     model.add(layers.Dense(1, activation='linear'))
     model.compile(loss='mean_absolute_error', optimizer='adam', metrics=['mean_absolute_error'])
     return model
